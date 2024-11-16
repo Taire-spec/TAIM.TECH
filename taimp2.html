@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TAIM.TECH - AI Integration Agency">
+    <title>TAIM.TECH - AI Integration for Businesses</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #111;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+
+        header .logo h1 {
+            display: inline;
+            font-size: 2rem;
+            color: silver;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .nav-links {
+            list-style: none;
+        }
+
+        header .nav-links li {
+            display: inline;
+            margin-right: 2rem;
+        }
+
+        header .nav-links li a {
+            color: silver;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        header .nav-links li a:hover {
+            color: #e74c3c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #111;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: #e74c3c;
+            padding: 0.75rem 2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #222;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #333;
+            padding: 4rem 2rem;
+        }
+
+        .services .container {
+            text-align: center;
+        }
+
+        .services .service-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 30%;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background-color: #111;
+            padding: 4rem 2rem;
+        }
+
+        .portfolio .container {
+            text-align: center;
+        }
+
+        .portfolio .portfolio-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .portfolio-card {
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 45%;
+            text-align: center;
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-card p {
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #222;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact form label {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 80%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            padding: 0.8rem 2rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact form button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Chatbot */
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .chatbot-btn {
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            background: transparent;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Newsletter Signup */
+        .newsletter {
+            background-color: #333;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .newsletter form input {
+            width: 60%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .newsletter form button {
+            padding: 0.8rem 2rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>TAIM.TECH</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Empowering Your Business with AI Integration</h2>
+            <p>At TAIM.TECH, we specialize in fast and effective AI integration to help you stay ahead of the competition.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At TAIM.TECH, we specialize in fast and effective AI integration for businesses of all sizes. Our expert team is dedicated to staying ahead of the curve in AI development, so you can stay ahead of the competition.</p>
+            <p>With our innovative solutions, we help you leverage the power of AI to optimize your operations, increase efficiency, and drive growth. Contact us today to see how we can help you maximize the benefits of AI for your business.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>AI-Powered Workflow Automation</h3>
+                    <p>Automate repetitive tasks and improve operational efficiency with AI-driven workflows.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Predictive Analytics & Decision Support</h3>
+                    <p>Make data-driven decisions with AI-powered predictive analytics tools.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Intelligent Robotic Process Automation (RPA)</h3>
+                    <p>Leverage robotic process automation to streamline complex processes and reduce human error.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cognitive Document Processing</h3>
+                    <p>Extract insights from documents with AI-based cognitive document processing.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Supply Chain Optimization</h3>
+                    <p>Optimize your supply chain with AI to reduce costs and improve efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-cards">
+                <div class="portfolio-card">
+                    <h3>Project X</h3>
+                    <p>A Fortune 500 company increased customer retention by 25% with our predictive analytics system.</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Project A</h3>
+                    <p>A major financial institution reduced customer service costs by 30% with our NLP chatbot.</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Project Y</h3>
+                    <p>A manufacturing company increased production efficiency by 20% with our intelligent automation system.</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Project Z</h3>
+                    <p>A healthcare provider reduced patient wait times by 50% with our big data analytics solution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 TAIM.TECH. All rights reserved.</p>
+    </footer>
+
+    <!-- Chatbot Integration (Tidio) -->
+    <script src="https://code.tidio.co/your_unique_code.js" async></script>
+
+    <!-- Optional: Newsletter Signup -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Sign up for our newsletter to receive the latest AI trends and news.</p>
+            <form action="newsletter_signup.php" method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
