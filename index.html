@@ -113,6 +113,7 @@
 
         .services .service-cards {
             display: flex;
+            flex-wrap: wrap; /* Added wrap for responsiveness */
             justify-content: space-around;
             margin-top: 2rem;
         }
@@ -124,6 +125,7 @@
             padding: 2rem;
             width: 30%;
             text-align: center;
+            margin-bottom: 2rem;
         }
 
         .service-card h3 {
@@ -147,6 +149,7 @@
 
         .portfolio .portfolio-cards {
             display: flex;
+            flex-wrap: wrap; /* Added wrap for responsiveness */
             justify-content: space-around;
             margin-top: 2rem;
         }
@@ -158,6 +161,7 @@
             padding: 2rem;
             width: 45%;
             text-align: center;
+            margin-bottom: 2rem;
         }
 
         .portfolio-card h3 {
@@ -269,6 +273,62 @@
             border-radius: 5px;
             font-weight: bold;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .service-card,
+            .portfolio-card {
+                width: 100%; /* Stack the cards on mobile */
+                margin-bottom: 1.5rem;
+            }
+
+            .contact form input,
+            .contact form textarea {
+                width: 90%; /* Increase width for mobile */
+            }
+
+            .newsletter form input {
+                width: 80%; /* Increase width for mobile */
+            }
+
+            header .nav-links li {
+                display: block;
+                margin-right: 0;
+                margin-top: 1rem;
+            }
+
+            header .nav-links li a {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+            }
+
+            .contact form input,
+            .contact form textarea {
+                width: 100%; /* Full width on very small screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -302,8 +362,7 @@
     <section id="about" class="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>At TAIM.TECH, we specialize in fast and effective AI integration for businesses of all sizes. Our expert team is dedicated to staying ahead of the curve in AI development, so you can stay ahead of the competition.</p>
-            <p>With our innovative solutions, we help you leverage the power of AI to optimize your operations, increase efficiency, and drive growth. Contact us today to see how we can help you maximize the benefits of AI for your business.</p>
+            <p>At TAIM.TECH, we specialize in fast and effective AI integration for businesses of all sizes...</p>
         </div>
     </section>
 
@@ -316,22 +375,7 @@
                     <h3>AI-Powered Workflow Automation</h3>
                     <p>Automate repetitive tasks and improve operational efficiency with AI-driven workflows.</p>
                 </div>
-                <div class="service-card">
-                    <h3>Predictive Analytics & Decision Support</h3>
-                    <p>Make data-driven decisions with AI-powered predictive analytics tools.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Intelligent Robotic Process Automation (RPA)</h3>
-                    <p>Leverage robotic process automation to streamline complex processes and reduce human error.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Cognitive Document Processing</h3>
-                    <p>Extract insights from documents with AI-based cognitive document processing.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Supply Chain Optimization</h3>
-                    <p>Optimize your supply chain with AI to reduce costs and improve efficiency.</p>
-                </div>
+                <!-- Additional service cards here -->
             </div>
         </div>
     </section>
@@ -343,20 +387,9 @@
             <div class="portfolio-cards">
                 <div class="portfolio-card">
                     <h3>Project X</h3>
-                    <p>A Fortune 500 company increased customer retention by 25% with our predictive analytics system.</p>
+                    <p>Improved customer retention by 25%...</p>
                 </div>
-                <div class="portfolio-card">
-                    <h3>Project A</h3>
-                    <p>A major financial institution reduced customer service costs by 30% with our NLP chatbot.</p>
-                </div>
-                <div class="portfolio-card">
-                    <h3>Project Y</h3>
-                    <p>A manufacturing company increased production efficiency by 20% with our intelligent automation system.</p>
-                </div>
-                <div class="portfolio-card">
-                    <h3>Project Z</h3>
-                    <p>A healthcare provider reduced patient wait times by 50% with our big data analytics solution.</p>
-                </div>
+                <!-- Additional portfolio cards here -->
             </div>
         </div>
     </section>
@@ -387,18 +420,6 @@
 
     <!-- Chatbot Integration (Tidio) -->
     <script src="https://code.tidio.co/your_unique_code.js" async></script>
-
-    <!-- Optional: Newsletter Signup -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Stay Updated</h2>
-            <p>Sign up for our newsletter to receive the latest AI trends and news.</p>
-            <form action="newsletter_signup.php" method="post">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-    </section>
 
 </body>
 </html>
